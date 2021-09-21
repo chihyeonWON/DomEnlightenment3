@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML*Element Entity's attributions&methods</title>
+</head>
+<body>
+    
+    <a href="#">Hi</a>
+
+    <script>
+
+        var anchor = document.querySelector("a");
+
+        //element 속성
+        console.log(Object.keys(anchor).sort());
+
+        //element 고유 속성 및 상속받은 속성
+        var documentPropertiesIncludeInherited = [];
+        for(var p in document){
+            documentPropertiesIncludeInherited.push(p);
+        }
+        console.log(documentPropertiesIncludeInherited.sort());
+
+        //element가 상속받은 속성만
+        var documentPropertiesOnlyInherited = [];
+        for(var p in document){
+            if(!document.hasOwnProperty(p)){
+                documentPropertiesOnlyInherited.push(p);
+            }
+        }
+        console.log(documentPropertiesOnlyInherited.sort());
+    </script>
+</body>
+</html>
