@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use createElement Function</title>
+</head>
+<body>
+    
+    <script>
+
+        var elementNode = document.createElement("textarea"); /* HTMLTextAreaElement()는 <textarea>를 생성한다. */
+        
+        document.body.appendChild(elementNode);
+
+        console.log(document.querySelector("textarea")); //이제 DOM 내에 존재하는지 확인한다.
+        
+    </script>
+</body>
+</html>
